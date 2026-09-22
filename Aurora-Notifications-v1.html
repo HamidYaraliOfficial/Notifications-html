@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05040d">
+<title>Aurora Wave | پیام‌های موجی</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Orbitron:wght@400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden}
+body{
+  font-family:'Vazirmatn','Inter',-apple-system,sans-serif;
+  background:#000;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  min-height:100vh;min-height:100dvh;
+  position:relative;overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+  cursor:none;
+}
+body.no-custom-cursor{cursor:auto}
+body.no-custom-cursor *{cursor:auto}
+body.no-custom-cursor button{cursor:pointer}
+body.no-custom-cursor input{cursor:text}
+
+:root{
+  --b1:#7C3AED;--b2:#EC4899;--b3:#06B6D4;
+  --g1:124,58,237;--g2:236,72,153;--g3:6,182,212;
+  --accent:#06B6D4;--accentg:6,182,212;
+  --txt:#fff;
+  --txt2:rgba(255,255,255,.78);
+  --txt3:rgba(255,255,255,.5);
+  --txt4:rgba(255,255,255,.28);
+  --txt5:rgba(255,255,255,.14);
+  --e:cubic-bezier(.16,1,.3,1);
+  --ee:cubic-bezier(.68,-.55,.265,1.55);
+  --es:cubic-bezier(.4,0,.2,1);
+}
+
+[data-color="violet"]{--b1:#7C3AED;--b2:#EC4899;--b3:#06B6D4;--g1:124,58,237;--g2:236,72,153;--g3:6,182,212}
+[data-color="gold"]{--b1:#F59E0B;--b2:#EF4444;--b3:#FBBF24;--g1:245,158,11;--g2:239,68,68;--g3:251,191,36}
+[data-color="cyber"]{--b1:#EC4899;--b2:#06B6D4;--b3:#8B5CF6;--g1:236,72,153;--g2:6,182,212;--g3:139,92,246}
+[data-color="emerald"]{--b1:#10B981;--b2:#06B6D4;--b3:#84CC16;--g1:16,185,129;--g2:6,182,212;--g3:132,204,22}
+[data-color="ocean"]{--b1:#0EA5E9;--b2:#6366F1;--b3:#06B6D4;--g1:14,165,233;--g2:99,102,241;--g3:6,182,212}
+[data-color="rose"]{--b1:#F43F5E;--b2:#A855F7;--b3:#FB7185;--g1:244,63,94;--g2:168,85,247;--g3:251,113,133}
+[data-color="sunset"]{--b1:#F97316;--b2:#F43F5E;--b3:#FBBF24;--g1:249,115,22;--g2:244,63,94;--g3:251,191,36}
+[data-color="forest"]{--b1:#22C55E;--b2:#14B8A6;--b3:#84CC16;--g1:34,197,94;--g2:20,184,166;--g3:132,204,22}
+[data-color="royal"]{--b1:#8B5CF6;--b2:#6366F1;--b3:#A78BFA;--g1:139,92,246;--g2:99,102,241;--g3:167,139,250}
+[data-color="crimson"]{--b1:#DC2626;--b2:#F43F5E;--b3:#FB7185;--g1:220,38,38;--g2:244,63,94;--g3:251,113,133}
+
+body[data-note-type="success"]{--accent:#10B981;--accentg:16,185,129}
+body[data-note-type="info"]{--accent:#3B82F6;--accentg:59,130,246}
+body[data-note-type="warning"]{--accent:#F59E0B;--accentg:245,158,11}
+body[data-note-type="error"]{--accent:#EF4444;--accentg:239,68,68}
+body[data-note-type="update"]{--accent:#8B5CF6;--accentg:139,92,246}
+body[data-note-type="maintenance"]{--accent:#F97316;--accentg:249,115,22}
+body[data-note-type="security"]{--accent:#06B6D4;--accentg:6,182,212}
+body[data-note-type="billing"]{--accent:#22C55E;--accentg:34,197,94}
+body[data-note-type="social"]{--accent:#EC4899;--accentg:236,72,153}
+body[data-note-type="promo"]{--accent:#FBBF24;--accentg:251,191,36}
+body[data-note-type="system"]{--accent:#A78BFA;--accentg:167,139,250}
+
+/* CURSOR */
+#customCursor{position:fixed;top:0;left:0;width:36px;height:36px;pointer-events:none;z-index:2147483647;transform:translate3d(-100px,-100px,0);will-change:transform;opacity:0;transition:opacity .25s ease,width .25s var(--es),height .25s var(--es)}
+#customCursor.ready{opacity:1}
+#customCursor.hover{width:52px;height:52px}
+#customCursor.click{width:28px;height:28px}
+#customCursor svg{width:100%;height:100%;display:block;overflow:visible}
+#customCursor svg path,#customCursor svg circle,#customCursor svg polygon,#customCursor svg line,#customCursor svg rect,#customCursor svg polyline{stroke:none;fill:currentColor}
+#trailCanvas{position:fixed;inset:0;z-index:2147483646;pointer-events:none;width:100vw;height:100vh}
+
+/* ============================================================
+   BACKGROUND — WAVE THEME
+   ============================================================ */
+.wave-bg{position:fixed;inset:0;z-index:0;overflow:hidden;background:#000}
+
+.wave-base{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,#030109 0%,#0a0416 50%,#02010a 100%);
+}
+
+/* Animated wave layers */
+.wave-layer{
+  position:absolute;
+  bottom:0;left:-10%;right:-10%;
+  height:60vh;
+  opacity:.55;
+  will-change:transform;
+}
+.wave-layer path{
+  filter:drop-shadow(0 -20px 60px currentColor);
+}
+
+.wave-layer.w1{
+  color:rgba(var(--g1),.5);
+  animation:waveMove1 18s ease-in-out infinite;
+}
+.wave-layer.w2{
+  color:rgba(var(--g2),.4);
+  animation:waveMove2 22s ease-in-out infinite reverse;
+}
+.wave-layer.w3{
+  color:rgba(var(--g3),.3);
+  animation:waveMove3 26s ease-in-out infinite;
+}
+.wave-layer.w4{
+  color:rgba(var(--accentg),.25);
+  animation:waveMove1 30s ease-in-out infinite;
+  bottom:-5vh;
+}
+
+@keyframes waveMove1{
+  0%,100%{transform:translateX(0) translateY(0)}
+  50%{transform:translateX(-5%) translateY(-20px)}
+}
+@keyframes waveMove2{
+  0%,100%{transform:translateX(-3%) translateY(0)}
+  50%{transform:translateX(3%) translateY(-30px)}
+}
+@keyframes waveMove3{
+  0%,100%{transform:translateX(0) translateY(0)}
+  50%{transform:translateX(-4%) translateY(-15px)}
+}
+
+/* Radial glows */
+.wave-glow{
+  position:absolute;border-radius:50%;
+  filter:blur(120px);
+  opacity:.5;
+  mix-blend-mode:screen;
+  transition:background 1.4s var(--es);
+}
+.wave-glow.g1{
+  width:600px;height:600px;
+  background:rgba(var(--g1),.7);
+  top:-150px;left:-150px;
+  animation:glowMove1 25s ease-in-out infinite;
+}
+.wave-glow.g2{
+  width:500px;height:500px;
+  background:rgba(var(--g2),.6);
+  top:20%;right:-150px;
+  animation:glowMove2 30s ease-in-out infinite reverse;
+}
+@keyframes glowMove1{0%,100%{transform:translate(0,0)}50%{transform:translate(150px,80px)}}
+@keyframes glowMove2{0%,100%{transform:translate(0,0)}50%{transform:translate(-120px,60px)}}
+
+/* Fine noise */
+.wave-noise{
+  position:absolute;inset:0;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;pointer-events:none;
+}
+
+/* Vignette */
+.wave-vignette{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 100% 80% at 50% 50%,transparent 30%,rgba(0,0,0,.65) 75%,rgba(0,0,0,.95) 100%);
+  pointer-events:none;z-index:5;
+}
+
+#stars,#dust{position:fixed;inset:0;z-index:1;pointer-events:none}
+#dust{z-index:2}
+
+/* ============================================================
+   TOP BAR
+   ============================================================ */
+.top{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:20px 30px;z-index:100;pointer-events:none}
+.brand{display:flex;align-items:center;gap:12px;pointer-events:auto;animation:slideDown .8s var(--e) both}
+.brand-mark{
+  width:32px;height:32px;display:flex;align-items:center;justify-content:center;
+  position:relative;transition:transform .3s var(--es);
+}
+.brand-mark:hover{transform:rotate(-12deg) scale(1.1)}
+.brand-mark svg{width:100%;height:100%;filter:drop-shadow(0 0 12px rgba(var(--accentg),.9))}
+.brand-mark::after{
+  content:'';position:absolute;inset:-8px;border-radius:50%;
+  background:radial-gradient(circle,rgba(var(--accentg),.5),transparent 70%);
+  filter:blur(8px);z-index:-1;
+  animation:markGlow 3s ease-in-out infinite;
+}
+@keyframes markGlow{0%,100%{opacity:.5}50%{opacity:1}}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-name{font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#fff,rgba(255,255,255,.6));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.brand-tag{font-size:8px;color:var(--txt4);font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-top:2px}
+.controls{display:flex;gap:16px;align-items:center;pointer-events:auto;animation:slideDown .8s var(--e) .1s both}
+@keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+
+.sw-row{display:flex;gap:8px;align-items:center}
+.sw{width:16px;height:16px;border-radius:50%;border:none;cursor:pointer;padding:0;transition:all .35s var(--ee);position:relative;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.sw:hover{transform:scale(1.4)}
+.sw.on{transform:scale(1.35)}
+.sw.on::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:1.5px solid rgba(255,255,255,.7);animation:swRing 1.5s ease-out infinite}
+@keyframes swRing{0%{transform:scale(.8);opacity:1}100%{transform:scale(1.6);opacity:0}}
+.sw[data-color="violet"]{background:linear-gradient(135deg,#7C3AED,#EC4899,#06B6D4)}
+.sw[data-color="gold"]{background:linear-gradient(135deg,#F59E0B,#EF4444,#FBBF24)}
+.sw[data-color="cyber"]{background:linear-gradient(135deg,#EC4899,#06B6D4,#8B5CF6)}
+.sw[data-color="emerald"]{background:linear-gradient(135deg,#10B981,#06B6D4,#84CC16)}
+.sw[data-color="ocean"]{background:linear-gradient(135deg,#0EA5E9,#6366F1,#06B6D4)}
+.sw[data-color="rose"]{background:linear-gradient(135deg,#F43F5E,#A855F7,#FB7185)}
+.sw[data-color="sunset"]{background:linear-gradient(135deg,#F97316,#F43F5E,#FBBF24)}
+.sw[data-color="forest"]{background:linear-gradient(135deg,#22C55E,#14B8A6,#84CC16)}
+.sw[data-color="royal"]{background:linear-gradient(135deg,#8B5CF6,#6366F1,#A78BFA)}
+.sw[data-color="crimson"]{background:linear-gradient(135deg,#DC2626,#F43F5E,#FB7185)}
+
+.tbtn{display:flex;align-items:center;gap:6px;padding:8px 4px;background:none;border:none;color:var(--txt3);font-family:inherit;font-size:11px;font-weight:700;cursor:pointer;transition:all .3s var(--es);letter-spacing:.5px;position:relative}
+.tbtn:hover{color:var(--txt)}
+.tbtn::after{content:'';position:absolute;bottom:2px;left:4px;right:4px;height:1px;background:linear-gradient(90deg,var(--b1),var(--b2));transform:scaleX(0);transition:transform .35s var(--e)}
+.tbtn:hover::after{transform:scaleX(1)}
+.tbtn.on{color:var(--accent)}
+.tbtn.on::after{background:linear-gradient(90deg,var(--accent),var(--b2));transform:scaleX(1)}
+.tbtn svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sep{width:3px;height:3px;border-radius:50%;background:var(--txt5)}
+
+/* PANELS */
+.pnl{position:fixed;top:70px;right:24px;width:440px;max-height:calc(100vh - 100px);background:rgba(8,8,18,.6);backdrop-filter:blur(40px) saturate(200%);-webkit-backdrop-filter:blur(40px) saturate(200%);border-radius:24px;padding:20px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 100px rgba(var(--g1),.15);z-index:200;overflow-y:auto;opacity:0;transform:translateY(-20px) scale(.95);pointer-events:none;transition:all .45s var(--e)}
+.pnl.on{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.pnl-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.06)}
+.pnl-title{font-size:12px;font-weight:700;display:flex;align-items:center;gap:8px;letter-spacing:.5px;color:var(--txt)}
+.pnl-title svg{width:14px;height:14px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pnl-count{font-size:10px;font-weight:700;color:var(--accent);letter-spacing:1px}
+.pnl::-webkit-scrollbar{width:3px}
+.pnl::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--accent),var(--b2));border-radius:3px}
+
+.cats{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none}
+.cats::-webkit-scrollbar{display:none}
+.cat{padding:6px 12px;background:none;border:none;color:var(--txt4);font-family:inherit;font-size:10.5px;font-weight:700;cursor:pointer;white-space:nowrap;transition:all .3s var(--es);border-radius:100px;letter-spacing:.4px}
+.cat:hover{color:var(--txt2);background:rgba(255,255,255,.05)}
+.cat.on{color:#fff;background:linear-gradient(135deg,var(--accent),var(--b2));box-shadow:0 4px 14px rgba(var(--accentg),.4)}
+
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+
+/* ============================================================
+   NOTIFICATION PICKER — NEW STYLE (list row)
+   ============================================================ */
+.npi{
+  padding:10px 8px;
+  background:rgba(255,255,255,.03);
+  border:none;border-radius:10px;
+  cursor:pointer;transition:all .3s var(--e);
+  display:flex;flex-direction:column;
+  align-items:center;gap:4px;
+  text-align:center;color:#fff;
+  font-family:inherit;position:relative;
+  overflow:hidden;
+}
+.npi:hover{background:rgba(255,255,255,.07);transform:translateY(-2px)}
+.npi.on{background:rgba(var(--accentg),.15);box-shadow:inset 0 0 0 1.5px rgba(var(--accentg),.8)}
+.npi-icon{
+  width:26px;height:26px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.npi-icon svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.npi-icon[data-t="success"]{background:rgba(16,185,129,.25)}
+.npi-icon[data-t="info"]{background:rgba(59,130,246,.25)}
+.npi-icon[data-t="warning"]{background:rgba(245,158,11,.25)}
+.npi-icon[data-t="error"]{background:rgba(239,68,68,.25)}
+.npi-icon[data-t="update"]{background:rgba(139,92,246,.25)}
+.npi-icon[data-t="maintenance"]{background:rgba(249,115,22,.25)}
+.npi-icon[data-t="security"]{background:rgba(6,182,212,.25)}
+.npi-icon[data-t="billing"]{background:rgba(34,197,94,.25)}
+.npi-icon[data-t="social"]{background:rgba(236,72,153,.25)}
+.npi-icon[data-t="promo"]{background:rgba(251,191,36,.25)}
+.npi-icon[data-t="system"]{background:rgba(167,139,250,.25)}
+.npi span{font-size:9px;font-weight:700;line-height:1.2;opacity:.85}
+
+/* ANIM */
+.ani{padding:12px 8px;background:none;border:none;border-radius:12px;cursor:pointer;transition:all .35s var(--e);display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;color:var(--txt4);font-family:inherit;position:relative}
+.ani:hover{background:rgba(255,255,255,.05);color:var(--txt2);transform:translateY(-2px)}
+.ani.on{color:#fff;background:linear-gradient(135deg,rgba(var(--g1),.18),rgba(var(--g2),.1));box-shadow:inset 0 0 0 1.5px rgba(var(--g1),.7),0 8px 24px rgba(var(--g1),.25)}
+.ani svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ani.on svg{filter:drop-shadow(0 0 8px currentColor)}
+.ani span{font-size:9.5px;font-weight:700;line-height:1.2;letter-spacing:.2px}
+
+/* TRAIL */
+.trail{padding:10px 8px;background:none;border:none;border-radius:12px;cursor:pointer;transition:all .35s var(--e);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;color:var(--txt4);font-family:inherit;position:relative}
+.trail:hover{background:rgba(255,255,255,.05);color:var(--txt2);transform:translateY(-2px)}
+.trail.on{color:#fff;background:linear-gradient(135deg,rgba(var(--g1),.18),rgba(var(--g2),.1));box-shadow:inset 0 0 0 1.5px rgba(var(--g1),.7),0 8px 24px rgba(var(--g1),.25)}
+.trail .ti{width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:22px;transition:transform .35s var(--ee);filter:drop-shadow(0 4px 8px rgba(0,0,0,.4))}
+.trail:hover .ti{transform:scale(1.2) rotate(-8deg)}
+.trail span{font-size:9.5px;font-weight:700;line-height:1.2}
+
+/* ============================================================
+   STAGE — GRID LAYOUT (different from v1)
+   ============================================================ */
+.stage{
+  position:relative;z-index:10;
+  width:100%;max-width:1080px;
+  padding:40px 30px;
+  perspective:2200px;
+}
+
+.note-layout{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:40px;
+  align-items:center;
+  animation:stageEntry 1.4s var(--e) both;
+}
+@keyframes stageEntry{
+  from{opacity:0;transform:translateY(60px);filter:blur(10px)}
+  to{opacity:1;transform:translateY(0);filter:blur(0)}
+}
+
+/* LEFT SIDE — huge animated icon/symbol */
+.note-visual{
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  min-width:260px;
+  position:relative;
+}
+
+.note-symbol-wrap{
+  width:200px;height:200px;
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+}
+
+/* Orbiting dots */
+.orbit{
+  position:absolute;inset:0;
+  animation:orbitSpin 12s linear infinite;
+}
+.orbit.o2{animation-duration:18s;animation-direction:reverse}
+.orbit.o3{animation-duration:24s}
+
+.orbit-dot{
+  position:absolute;
+  top:-4px;left:50%;
+  width:8px;height:8px;
+  border-radius:50%;
+  background:rgba(var(--accentg),1);
+  box-shadow:0 0 16px rgba(var(--accentg),.9),0 0 32px rgba(var(--accentg),.5);
+  transform:translateX(-50%);
+}
+.orbit.o2 .orbit-dot{background:var(--b2);box-shadow:0 0 16px var(--b2)}
+.orbit.o3 .orbit-dot{background:var(--b1);box-shadow:0 0 16px var(--b1);width:6px;height:6px}
+
+@keyframes orbitSpin{to{transform:rotate(360deg)}}
+
+/* Main icon — big */
+.note-symbol{
+  width:130px;height:130px;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;
+  position:relative;
+  z-index:2;
+}
+.note-symbol::before{
+  content:'';position:absolute;inset:-30px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(var(--accentg),.5),transparent 65%);
+  filter:blur(28px);
+  z-index:-1;
+  animation:symGlow 4s ease-in-out infinite;
+}
+@keyframes symGlow{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+.note-symbol::after{
+  content:'';position:absolute;inset:-8px;
+  border-radius:50%;
+  border:1.5px dashed rgba(var(--accentg),.35);
+  animation:symRing 20s linear infinite;
+}
+@keyframes symRing{to{transform:rotate(-360deg)}}
+.note-symbol svg{
+  width:100%;height:100%;
+  stroke:currentColor;fill:none;
+  stroke-width:1.2;
+  stroke-linecap:round;stroke-linejoin:round;
+  filter:drop-shadow(0 0 30px rgba(var(--accentg),.9)) drop-shadow(0 0 60px rgba(var(--accentg),.5));
+}
+
+/* Symbol animations (10 types) */
+[data-note-anim="pulse"] .note-symbol{animation:symPulse 2.5s ease-in-out infinite}
+@keyframes symPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+[data-note-anim="breathe"] .note-symbol{animation:symBreathe 3.5s ease-in-out infinite}
+@keyframes symBreathe{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.12);opacity:1}}
+[data-note-anim="float"] .note-symbol{animation:symFloat 4s ease-in-out infinite}
+@keyframes symFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+[data-note-anim="rotate"] .note-symbol{animation:symRotate 12s linear infinite}
+@keyframes symRotate{to{transform:rotate(360deg)}}
+[data-note-anim="bounce"] .note-symbol{animation:symBounce 2s ease-in-out infinite}
+@keyframes symBounce{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-18px) scale(1.02)}}
+[data-note-anim="shake"] .note-symbol{animation:symShake 3s ease-in-out infinite}
+@keyframes symShake{0%,85%,100%{transform:translate(0,0) rotate(0)}87%{transform:translate(-5px,2px) rotate(-2deg)}89%{transform:translate(5px,-2px) rotate(2deg)}91%{transform:translate(-3px,1px) rotate(-1deg)}93%{transform:translate(3px,-1px) rotate(1deg)}}
+[data-note-anim="wobble"] .note-symbol{animation:symWobble 3s ease-in-out infinite}
+@keyframes symWobble{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+[data-note-anim="heart"] .note-symbol{animation:symHeart 1.6s ease-in-out infinite}
+@keyframes symHeart{0%,100%{transform:scale(1)}14%{transform:scale(1.15)}28%{transform:scale(1)}42%{transform:scale(1.15)}}
+[data-note-anim="zoom"] .note-symbol{animation:symZoom 3s ease-in-out infinite}
+@keyframes symZoom{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+[data-note-anim="swing"] .note-symbol{animation:symSwing 3s ease-in-out infinite;transform-origin:top center}
+@keyframes symSwing{0%,100%{transform:rotate(0)}25%{transform:rotate(-12deg)}75%{transform:rotate(12deg)}}
+
+/* Right side — content */
+.note-content{
+  display:flex;flex-direction:column;
+  gap:0;
+}
+
+/* Small type tag */
+.note-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 16px;
+  background:rgba(var(--accentg),.12);
+  border-radius:100px;
+  font-size:10px;font-weight:800;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:rgba(var(--accentg),1);
+  align-self:flex-start;
+  margin-bottom:20px;
+  position:relative;
+}
+.note-tag::before{
+  content:'';width:5px;height:5px;
+  border-radius:50%;
+  background:currentColor;
+  box-shadow:0 0 10px currentColor;
+  animation:tagDot 1.5s ease-in-out infinite;
+}
+@keyframes tagDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.6)}}
+
+/* ============================================================
+   TITLE with WAVE EFFECT
+   ============================================================ */
+.note-title{
+  font-size:52px;
+  font-weight:200;
+  letter-spacing:-2px;
+  line-height:1.1;
+  margin-bottom:16px;
+  color:#fff;
+  font-family:'Space Grotesk','Vazirmatn',sans-serif;
+  animation:titleIn 1s var(--e) .15s both;
+}
+html[dir="rtl"] .note-title{font-family:'Vazirmatn',sans-serif;letter-spacing:-1.5px;font-weight:200}
+.note-title strong{
+  font-weight:800;
+  background:linear-gradient(135deg,
+    rgba(var(--accentg),1) 0%,
+    var(--b2) 50%,
+    rgba(var(--accentg),1) 100%);
+  background-size:200% 200%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:titleGrad 4s ease infinite;
+}
+@keyframes titleGrad{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes titleIn{from{opacity:0;transform:translateY(30px);filter:blur(10px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+
+.note-desc{
+  font-size:15px;
+  color:var(--txt3);
+  line-height:1.85;
+  font-weight:300;
+  letter-spacing:.3px;
+  max-width:520px;
+  margin-bottom:28px;
+  animation:titleIn 1s var(--e) .3s both;
+}
+
+/* ============================================================
+   WAVE PROGRESS BAR — unique
+   ============================================================ */
+.wave-progress{
+  margin-bottom:26px;
+  max-width:520px;
+  animation:titleIn 1s var(--e) .45s both;
+}
+.wave-progress-label{
+  display:flex;justify-content:space-between;
+  font-size:10.5px;
+  font-weight:800;
+  color:var(--txt4);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+.wave-progress-label .pct{
+  color:rgba(var(--accentg),1);
+  font-family:'Orbitron',sans-serif;
+  font-weight:900;
+  font-size:13px;
+}
+.wave-progress-track{
+  position:relative;
+  height:10px;
+  background:rgba(255,255,255,.05);
+  border-radius:100px;
+  overflow:hidden;
+}
+.wave-progress-fill{
+  height:100%;
+  background:linear-gradient(90deg,
+    rgba(var(--accentg),1),
+    var(--b2),
+    rgba(var(--accentg),1));
+  background-size:200% 100%;
+  border-radius:100px;
+  position:relative;
+  animation:waveProgressFill 2s var(--e) both, waveProgressGrad 3s ease infinite;
+  box-shadow:0 0 24px rgba(var(--accentg),.8);
+}
+.wave-progress-fill::after{
+  content:'';position:absolute;inset:0;
+  background-image:repeating-linear-gradient(45deg,
+    rgba(255,255,255,.15) 0,
+    rgba(255,255,255,.15) 10px,
+    transparent 10px,
+    transparent 20px);
+  background-size:28px 28px;
+  animation:waveStripes 0.7s linear infinite;
+}
+@keyframes waveProgressFill{from{width:0}}
+@keyframes waveProgressGrad{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes waveStripes{to{background-position:28px 0}}
+
+/* ============================================================
+   INFO CARDS — grid layout instead of list
+   ============================================================ */
+.note-grid-info{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:10px;
+  margin-bottom:26px;
+  max-width:520px;
+  animation:titleIn 1s var(--e) .5s both;
+}
+.info-card{
+  padding:12px 14px;
+  background:rgba(255,255,255,.04);
+  border-radius:12px;
+  position:relative;
+  overflow:hidden;
+  transition:all .35s var(--es);
+  cursor:default;
+}
+.info-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(var(--accentg),.5),transparent);
+}
+.info-card:hover{
+  background:rgba(255,255,255,.07);
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(0,0,0,.3);
+}
+.info-card-k{
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--txt4);
+  margin-bottom:6px;
+}
+.info-card-v{
+  font-family:'Space Grotesk','Courier New',monospace;
+  font-size:14px;
+  font-weight:600;
+  color:rgba(var(--accentg),1);
+  word-break:break-all;
+  line-height:1.3;
+}
+
+/* ============================================================
+   CHANGELOG — vertical timeline
+   ============================================================ */
+.timeline{
+  position:relative;
+  padding-left:30px;
+  margin-bottom:26px;
+  max-width:520px;
+  animation:titleIn 1s var(--e) .55s both;
+}
+html[dir="rtl"] .timeline{padding-left:0;padding-right:30px}
+.timeline::before{
+  content:'';position:absolute;
+  top:0;bottom:0;
+  left:6px;width:1.5px;
+  background:linear-gradient(180deg,
+    transparent,
+    rgba(var(--accentg),.4) 20%,
+    rgba(var(--accentg),.4) 80%,
+    transparent);
+}
+html[dir="rtl"] .timeline::before{left:auto;right:6px}
+.tl-item{
+  position:relative;
+  padding:6px 0 14px;
+  display:flex;align-items:flex-start;gap:12px;
+  font-size:13px;
+  color:var(--txt2);
+  line-height:1.7;
+  font-weight:300;
+}
+.tl-item::before{
+  content:'';position:absolute;
+  top:12px;
+  left:-30px;
+  width:14px;height:14px;
+  border-radius:50%;
+  background:rgba(20,20,30,.9);
+  border:2px solid rgba(var(--accentg),.8);
+  box-shadow:0 0 14px rgba(var(--accentg),.6);
+  z-index:2;
+}
+html[dir="rtl"] .tl-item::before{left:auto;right:-30px}
+.tl-tag{
+  padding:2px 8px;
+  border-radius:100px;
+  font-size:9.5px;
+  font-weight:800;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  flex-shrink:0;
+  align-self:flex-start;
+  margin-top:3px;
+}
+.tl-tag.new{background:rgba(16,185,129,.2);color:#10B981;box-shadow:0 0 12px rgba(16,185,129,.3)}
+.tl-tag.fix{background:rgba(245,158,11,.2);color:#F59E0B;box-shadow:0 0 12px rgba(245,158,11,.3)}
+.tl-tag.imp{background:rgba(59,130,246,.2);color:#3B82F6;box-shadow:0 0 12px rgba(59,130,246,.3)}
+.tl-tag.sec{background:rgba(239,68,68,.2);color:#EF4444;box-shadow:0 0 12px rgba(239,68,68,.3)}
+
+/* ============================================================
+   BILLING — HORIZONTAL card
+   ============================================================ */
+.bill-horizontal{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:24px;
+  padding:22px;
+  background:
+    linear-gradient(135deg,rgba(var(--accentg),.1),rgba(var(--accentg),.02));
+  border-radius:18px;
+  margin-bottom:26px;
+  max-width:520px;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  animation:titleIn 1s var(--e) .55s both;
+}
+.bill-horizontal::before{
+  content:'';position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(var(--accentg),.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(var(--accentg),.06) 1px,transparent 1px);
+  background-size:20px 20px;
+  mask-image:radial-gradient(circle at 50% 50%,black 30%,transparent 80%);
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,black 30%,transparent 80%);
+}
+.bill-horizontal > *{position:relative;z-index:1}
+.bill-plan-box{
+  padding:18px 20px;
+  background:rgba(0,0,0,.3);
+  border-radius:14px;
+  text-align:center;
+  min-width:130px;
+}
+.bill-plan-name{
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:rgba(var(--accentg),1);
+  margin-bottom:8px;
+}
+.bill-price-h{
+  font-family:'Orbitron',sans-serif;
+  font-size:26px;
+  font-weight:900;
+  color:#fff;
+  line-height:1;
+}
+.bill-price-h .per{
+  font-size:11px;
+  color:var(--txt4);
+  font-family:'Vazirmatn',sans-serif;
+  font-weight:500;
+  margin-left:3px;
+}
+.bill-features-h{
+  display:flex;flex-direction:column;gap:10px;
+}
+.bill-feat-h{
+  display:flex;align-items:center;gap:10px;
+  font-size:12.5px;
+  color:var(--txt2);
+  font-weight:300;
+  line-height:1.4;
+}
+.bill-feat-h svg{
+  width:16px;height:16px;
+  stroke:rgba(var(--accentg),1);
+  fill:none;stroke-width:2.5;
+  stroke-linecap:round;stroke-linejoin:round;
+  flex-shrink:0;
+  filter:drop-shadow(0 0 6px rgba(var(--accentg),.6));
+}
+
+/* ============================================================
+   ACTIONS — horizontal pills
+   ============================================================ */
+.note-actions-h{
+  display:flex;gap:12px;flex-wrap:wrap;
+  margin-top:6px;
+  animation:titleIn 1s var(--e) .65s both;
+}
+.note-btn{
+  padding:13px 26px;
+  background:rgba(255,255,255,.05);
+  border:none;
+  border-radius:100px;
+  font-family:inherit;
+  font-size:12.5px;
+  font-weight:600;
+  letter-spacing:.5px;
+  cursor:pointer;
+  transition:all .35s var(--es);
+  display:inline-flex;align-items:center;gap:9px;
+  color:var(--txt2);
+  position:relative;
+  overflow:hidden;
+}
+.note-btn::before{
+  content:'';position:absolute;
+  inset:0;border-radius:inherit;
+  background:radial-gradient(circle at center,rgba(var(--accentg),.4),transparent 70%);
+  opacity:0;
+  transition:opacity .4s var(--es);
+}
+.note-btn:hover{color:#fff;transform:translateY(-2px);background:rgba(255,255,255,.09)}
+.note-btn:hover::before{opacity:1}
+.note-btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;position:relative;z-index:1}
+.note-btn span{position:relative;z-index:1}
+
+.note-btn.primary{
+  background:linear-gradient(135deg,
+    rgba(var(--accentg),1),
+    var(--b2));
+  color:#fff;
+  box-shadow:0 10px 26px rgba(var(--accentg),.5);
+}
+.note-btn.primary::before{display:none}
+.note-btn.primary:hover{
+  box-shadow:0 16px 38px rgba(var(--accentg),.7),0 0 60px rgba(var(--accentg),.4);
+}
+
+/* ============================================================
+   META — compact row
+   ============================================================ */
+.note-meta-h{
+  margin-top:28px;
+  display:flex;gap:16px;flex-wrap:wrap;
+  font-size:10.5px;
+  color:var(--txt4);
+  font-family:'Space Grotesk','Courier New',monospace;
+  letter-spacing:.3px;
+  animation:titleIn 1s var(--e) .8s both;
+}
+.note-meta-h span{
+  display:flex;align-items:center;gap:6px;
+  padding:5px 12px;
+  background:rgba(255,255,255,.03);
+  border-radius:100px;
+  transition:all .3s var(--es);
+}
+.note-meta-h span:hover{background:rgba(255,255,255,.07);color:var(--txt2)}
+.note-meta-h svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.note-id-h{color:rgba(var(--accentg),1);font-weight:700}
+
+/* TOAST */
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(150px);padding:14px 28px;background:rgba(15,15,25,.85);backdrop-filter:blur(28px) saturate(190%);border-radius:100px;color:#fff;font-size:13px;font-weight:500;display:flex;align-items:center;gap:12px;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(var(--g1),.2);opacity:0;transition:all .55s var(--ee);z-index:1000;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast-dot{width:8px;height:8px;border-radius:50%;background:#10B981;box-shadow:0 0 12px currentColor;flex-shrink:0}
+.toast.info .toast-dot{background:var(--accent);color:var(--accent)}
+.toast.error .toast-dot{background:#EF4444;color:#EF4444}
+
+/* FLOATING NAV */
+.float-nav{position:fixed;bottom:24px;right:24px;display:flex;gap:10px;z-index:150}
+.nav-btn{width:48px;height:48px;border-radius:50%;background:rgba(15,15,25,.85);backdrop-filter:blur(20px);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .35s var(--e);box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 20px rgba(var(--accentg),.2)}
+.nav-btn:hover{transform:translateY(-3px) scale(1.08);background:linear-gradient(135deg,var(--accent),var(--b2));box-shadow:0 18px 42px rgba(var(--accentg),.6)}
+.nav-btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+html[dir="rtl"] .nav-prev svg{transform:scaleX(-1)}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .note-layout{grid-template-columns:1fr;gap:24px;justify-items:center;text-align:center}
+  .note-content{align-items:center;width:100%}
+  .note-tag{align-self:center}
+  .note-title,.note-desc,.wave-progress,.note-grid-info,.timeline,.bill-horizontal{max-width:100%}
+  .note-title{font-size:38px}
+  .timeline{padding-left:0;padding-right:0}
+  .timeline::before{display:none}
+  .tl-item{justify-content:center;flex-wrap:wrap}
+  .tl-item::before{display:none}
+  .note-actions-h{justify-content:center}
+  .bill-horizontal{grid-template-columns:1fr;justify-items:center}
+  .note-meta-h{justify-content:center}
+}
+@media(max-width:768px){.pnl{width:340px}}
+@media(max-width:640px){
+.top{padding:14px 18px}
+.brand-name{font-size:11px}
+.brand-tag{font-size:7px}
+.controls{gap:10px}
+.pnl{top:60px;right:14px;left:14px;width:auto;max-height:calc(100vh - 90px);padding:16px}
+.grid4{grid-template-columns:repeat(3,1fr)}
+.stage{padding:20px 20px}
+.note-symbol-wrap{width:160px;height:160px}
+.note-symbol{width:100px;height:100px}
+.note-title{font-size:32px}
+.note-desc{font-size:13px}
+}
+@media(max-width:400px){
+.stage{padding:16px}
+.note-title{font-size:26px}
+.note-symbol-wrap{width:130px;height:130px}
+.note-symbol{width:80px;height:80px}
+.note-desc{font-size:12px}
+.note-btn{padding:11px 20px;font-size:11.5px}
+.note-grid-info{grid-template-columns:1fr 1fr}
+.info-card{padding:10px 12px}
+.info-card-v{font-size:12px}
+.grid4{grid-template-columns:repeat(2,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body data-color="violet" data-trail="sparkle" data-note-type="info" data-note-anim="pulse">
+
+<div id="customCursor" aria-hidden="true"></div>
+<canvas id="trailCanvas" aria-hidden="true"></canvas>
+
+<div class="wave-bg" aria-hidden="true">
+  <div class="wave-base"></div>
+
+  <div class="wave-glow g1"></div>
+  <div class="wave-glow g2"></div>
+
+  <!-- Wave layers -->
+  <svg class="wave-layer w1" viewBox="0 0 1440 400" preserveAspectRatio="none">
+    <path fill="currentColor" d="M0,200 C240,280 480,120 720,200 C960,280 1200,120 1440,200 L1440,400 L0,400 Z"/>
+  </svg>
+  <svg class="wave-layer w2" viewBox="0 0 1440 400" preserveAspectRatio="none">
+    <path fill="currentColor" d="M0,240 C360,160 720,320 1080,240 C1260,200 1380,220 1440,240 L1440,400 L0,400 Z"/>
+  </svg>
+  <svg class="wave-layer w3" viewBox="0 0 1440 400" preserveAspectRatio="none">
+    <path fill="currentColor" d="M0,280 C320,340 640,220 960,300 C1200,360 1360,300 1440,280 L1440,400 L0,400 Z"/>
+  </svg>
+  <svg class="wave-layer w4" viewBox="0 0 1440 400" preserveAspectRatio="none">
+    <path fill="currentColor" d="M0,320 C480,240 960,400 1440,320 L1440,400 L0,400 Z"/>
+  </svg>
+
+  <canvas id="stars"></canvas>
+  <canvas id="dust"></canvas>
+
+  <div class="wave-vignette"></div>
+  <div class="wave-noise"></div>
+</div>
+
+<header class="top">
+  <div class="brand">
+    <div class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M2 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M2 17c2-3 4-3 6 0s4 3 6 0 4-3 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+      </svg>
+    </div>
+    <div class="brand-text">
+      <span class="brand-name">AURORA WAVE</span>
+      <span class="brand-tag" data-fa="پیام‌های موجی" data-en="Wave Messages">پیام‌های موجی</span>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="sw-row">
+      <button class="sw on" data-color="violet"></button>
+      <button class="sw" data-color="gold"></button>
+      <button class="sw" data-color="cyber"></button>
+      <button class="sw" data-color="emerald"></button>
+      <button class="sw" data-color="ocean"></button>
+      <button class="sw" data-color="rose"></button>
+      <button class="sw" data-color="sunset"></button>
+      <button class="sw" data-color="forest"></button>
+      <button class="sw" data-color="royal"></button>
+      <button class="sw" data-color="crimson"></button>
+    </div>
+
+    <span class="sep"></span>
+
+    <button class="tbtn on" onclick="togglePnl('pnlNote')">
+      <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+      <span data-fa="پیام‌ها" data-en="Notes">پیام‌ها</span>
+    </button>
+
+    <button class="tbtn" onclick="togglePnl('pnlAnim')">
+      <svg viewBox="0 0 24 24"><path d="M13 2L3 14h8l-1 8 10-12h-8z"/></svg>
+      <span data-fa="انیمیشن" data-en="Anim">انیمیشن</span>
+    </button>
+
+    <button class="tbtn" onclick="togglePnl('pnlTrail')">
+      <svg viewBox="0 0 24 24"><path d="M3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9"/></svg>
+      <span data-fa="موس" data-en="Cursor">موس</span>
+    </button>
+
+    <button class="tbtn" onclick="toggleLang()">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+      <span id="langL">EN</span>
+    </button>
+  </div>
+</header>
+
+<aside class="pnl on" id="pnlNote">
+  <div class="pnl-header">
+    <div class="pnl-title">
+      <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+      <span data-fa="انتخاب پیام" data-en="Select Message">انتخاب پیام</span>
+    </div>
+    <span class="pnl-count" id="noteCount">0</span>
+  </div>
+  <div class="cats" id="noteCats"></div>
+  <div class="grid4" id="noteGrid"></div>
+</aside>
+
+<aside class="pnl" id="pnlAnim">
+  <div class="pnl-header">
+    <div class="pnl-title">
+      <svg viewBox="0 0 24 24"><path d="M13 2L3 14h8l-1 8 10-12h-8z"/></svg>
+      <span data-fa="انیمیشن" data-en="Animation">انیمیشن</span>
+    </div>
+    <span class="pnl-count">۱۰</span>
+  </div>
+  <div class="grid3" id="animGrid"></div>
+</aside>
+
+<aside class="pnl" id="pnlTrail">
+  <div class="pnl-header">
+    <div class="pnl-title">
+      <svg viewBox="0 0 24 24"><path d="M3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9"/></svg>
+      <span data-fa="افکت موس" data-en="Cursor Effect">افکت موس</span>
+    </div>
+    <span class="pnl-count">۱۰</span>
+  </div>
+  <div class="grid3" id="trailGrid"></div>
+</aside>
+
+<main class="stage" id="stage">
+  <div class="note-layout" id="noteLayout">
+    <!-- Populated by JS -->
+  </div>
+</main>
+
+<div class="float-nav">
+  <button class="nav-btn nav-prev" onclick="prevNote()" aria-label="قبلی">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="nav-btn nav-next" onclick="nextNote()" aria-label="بعدی">
+    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <div class="toast-dot"></div>
+  <div id="toastMsg"></div>
+</div>
+
+<script>
+const S = {
+  lang: 'fa',
+  color: 'violet',
+  trail: 'sparkle',
+  note: 'welcome',
+  cat: 'all',
+  anim: 'pulse'
+};
+
+/* ANIMATIONS (10) */
+const ANIMS = [
+  {id:'pulse',fa:'ضربان',en:'Pulse',svg:'<circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7" opacity=".5"/>'},
+  {id:'breathe',fa:'تنفس',en:'Breathe',svg:'<circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" opacity=".4"/>'},
+  {id:'float',fa:'شناور',en:'Float',svg:'<path d="M12 4v6M12 14v6M8 8l4-4 4 4"/>'},
+  {id:'rotate',fa:'چرخش',en:'Rotate',svg:'<circle cx="12" cy="12" r="9"/><line x1="12" y1="3" x2="12" y2="9"/>'},
+  {id:'bounce',fa:'پرش',en:'Bounce',svg:'<circle cx="12" cy="6" r="3"/><path d="M12 12v8"/>'},
+  {id:'shake',fa:'لرزش',en:'Shake',svg:'<path d="M4 8l4-4M20 8l-4-4M4 16l4 4M20 16l-4 4"/>'},
+  {id:'wobble',fa:'لرزان',en:'Wobble',svg:'<circle cx="12" cy="12" r="8" opacity=".5"/><circle cx="12" cy="12" r="4"/>'},
+  {id:'heart',fa:'ضربان قلب',en:'Heartbeat',svg:'<path d="M12 21s-8-5-8-11a5 5 0 0 1 8-3 5 5 0 0 1 8 3c0 6-8 11-8 11z"/>'},
+  {id:'zoom',fa:'بزرگ‌نمایی',en:'Zoom',svg:'<circle cx="11" cy="11" r="7"/><line x1="20" y1="20" x2="16.65" y2="16.65"/>'},
+  {id:'swing',fa:'نوسان',en:'Swing',svg:'<path d="M12 3v18"/><circle cx="12" cy="7" r="3"/>'}
+];
+
+/* TRAILS (10) */
+const TRAILS = [
+  {id:'default',fa:'ساده',en:'Default',emoji:'🖱️',color:'#EC4899',draw:null},
+  {id:'airplane',fa:'هواپیما',en:'Airplane',emoji:'✈️',color:'#7DD3FC',draw:function(ctx,x,y,angle,alpha){ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.globalAlpha=alpha;ctx.fillStyle='#7DD3FC';ctx.beginPath();ctx.moveTo(0,-8);ctx.lineTo(2,-1);ctx.lineTo(8,2);ctx.lineTo(2,3);ctx.lineTo(3,8);ctx.lineTo(0,6);ctx.lineTo(-3,8);ctx.lineTo(-2,3);ctx.lineTo(-8,2);ctx.lineTo(-2,-1);ctx.closePath();ctx.fill();ctx.restore()}},
+  {id:'bird',fa:'پرنده',en:'Bird',emoji:'🐦',color:'#FBBF24',draw:function(ctx,x,y,angle,alpha){ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.globalAlpha=alpha;ctx.fillStyle='#FBBF24';const flap=Math.sin(Date.now()*0.015)*0.6;ctx.beginPath();ctx.moveTo(0,0);ctx.quadraticCurveTo(-4,-4+flap*2,-8,-2+flap*3);ctx.quadraticCurveTo(-4,-1,0,0);ctx.quadraticCurveTo(4,-1,8,-2+flap*3);ctx.quadraticCurveTo(4,-4+flap*2,0,0);ctx.fill();ctx.restore()}},
+  {id:'star',fa:'ستاره',en:'Star',emoji:'⭐',color:'#FDE047',draw:function(ctx,x,y,angle,alpha){ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.globalAlpha=alpha;ctx.fillStyle='#FDE047';ctx.shadowBlur=6;ctx.shadowColor='#FDE047';ctx.beginPath();for(let i=0;i<10;i++){const r=i%2===0?5:2.2;const a=(Math.PI/5)*i-Math.PI/2;ctx.lineTo(Math.cos(a)*r,Math.sin(a)*r)}ctx.closePath();ctx.fill();ctx.restore()}},
+  {id:'fire',fa:'آتش',en:'Fire',emoji:'🔥',color:'#F97316',draw:function(ctx,x,y,angle,alpha){ctx.save();ctx.globalAlpha=alpha;const g=ctx.createRadialGradient(x,y,0,x,y,6);g.addColorStop(0,'rgba(255,255,255,'+alpha+')');g.addColorStop(.4,'rgba(251,191,36,'+alpha+')');g.addColorStop(1,'rgba(239,68,68,0)');ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,6,0,Math.PI*2);ctx.fill();ctx.restore()}},
+  {id:'heart',fa:'قلب',en:'Heart',emoji:'💖',color:'#F43F5E',draw:function(ctx,x,y,angle,alpha){ctx.save();ctx.translate(x,y);ctx.scale(.5,.5);ctx.globalAlpha=alpha;ctx.fillStyle='#F43F5E';ctx.shadowBlur=10;ctx.shadowColor='#F43F5E';ctx.beginPath();ctx.moveTo(0,6);ctx.bezierCurveTo(-10,0,-6,-8,0,-4);ctx.bezierCurveTo(6,-8,10,0,0,6);ctx.closePath();ctx.fill();ctx.restore()}},
+  {id:'snow',fa:'برف',en:'Snow',emoji:'❄️',color:'#E0F2FE',draw:function(ctx,x,y,angle,alpha){ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.globalAlpha=alpha;ctx.strokeStyle='#E0F2FE';ctx.lineWidth=1.2;for(let i=0;i<3;i++){const a=(Math.PI/3)*i;ctx.beginPath();ctx.moveTo(-Math.cos(a)*3,-Math.sin(a)*3);ctx.lineTo(Math.cos(a)*3,Math.sin(a)*3);ctx.stroke()}ctx.restore()}},
+  {id:'sparkle',fa:'جرقه',en:'Sparkle',emoji:'✨',color:'#FCD34D',draw:function(ctx,x,y,angle,alpha){ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.globalAlpha=alpha;ctx.fillStyle='#FCD34D';ctx.shadowBlur=10;ctx.shadowColor='#FCD34D';ctx.fillRect(-0.7,-4,1.4,8);ctx.fillRect(-4,-0.7,8,1.4);ctx.restore()}},
+  {id:'bubble',fa:'حباب',en:'Bubble',emoji:'🫧',color:'#67E8F9',draw:function(ctx,x,y,angle,alpha){ctx.save();ctx.globalAlpha=alpha;ctx.strokeStyle='#67E8F9';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);ctx.stroke();ctx.restore()}},
+  {id:'wave',fa:'موج',en:'Wave',emoji:'🌊',color:'#0EA5E9',draw:function(ctx,x,y,angle,alpha){ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.globalAlpha=alpha;ctx.strokeStyle='#0EA5E9';ctx.lineWidth=1.5;ctx.beginPath();for(let i=-6;i<6;i++){if(i===-6)ctx.moveTo(i,Math.sin(i*.6)*2);else ctx.lineTo(i,Math.sin(i*.6)*2)}ctx.stroke();ctx.restore()}},
+  {id:'bell',fa:'زنگ',en:'Bell',emoji:'🔔',color:'#FCD34D',draw:function(ctx,x,y,angle,alpha){ctx.save();ctx.translate(x,y);ctx.globalAlpha=alpha;ctx.fillStyle='#FCD34D';ctx.beginPath();ctx.arc(0,-2,3,Math.PI,0);ctx.lineTo(3,3);ctx.lineTo(-3,3);ctx.closePath();ctx.fill();ctx.beginPath();ctx.arc(0,4,1,0,Math.PI*2);ctx.fill();ctx.restore()}}
+];
+
+/* ============================================================
+   ALL NOTES (65 — same as v1)
+   ============================================================ */
+const NOTES = [
+  /* SUCCESS */
+  {id:'welcome',type:'success',cat:'success',fa:'خوش آمدید به خانواده ما',en:'Welcome to the Family',
+   descFa:'حساب کاربری شما با موفقیت ایجاد شد. آماده کشف همه امکانات هستید؟',
+   descEn:'Your account was created successfully. Ready to explore everything?',
+   icon:'<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>',
+   info:[['USER ID','USR-A3X9'],['PLAN','Free'],['STATUS','ACTIVE'],['JOINED','Today']],
+   actions:[{l:'شروع',e:'Start',ic:'arrow',primary:true},{l:'تنظیمات',e:'Settings',ic:'gear'}]},
+  {id:'paid',type:'success',cat:'success',fa:'پرداخت با موفقیت انجام شد',en:'Payment Successful',
+   descFa:'تراکنش شما با موفقیت پردازش شد. از خرید شما متشکریم!',
+   descEn:'Your transaction was processed successfully.',
+   icon:'<circle cx="12" cy="12" r="9"/><polyline points="8 12 11 15 16 9"/>',
+   info:[['AMOUNT','$29.99'],['METHOD','Visa ****1234'],['REF','TXN-8A4B'],['STATUS','PAID']],
+   actions:[{l:'مشاهده رسید',e:'View Receipt',ic:'file',primary:true}]},
+  {id:'completed',type:'success',cat:'success',fa:'عملیات با موفقیت تکمیل شد',en:'Operation Complete',
+   descFa:'تمام مراحل با موفقیت انجام شد. سیستم آماده استفاده است.',
+   descEn:'All steps completed successfully.',
+   icon:'<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>',
+   info:[['OPERATION','Import data'],['RECORDS','1,247'],['TIME','3.2s'],['STATUS','COMPLETE']],
+   actions:[{l:'مشاهده',e:'View',ic:'eye',primary:true}]},
+  {id:'verified',type:'success',cat:'success',fa:'حساب شما تأیید شد',en:'Account Verified',
+   descFa:'هویت شما با موفقیت تأیید شد.',
+   descEn:'Your identity was verified.',
+   icon:'<path d="M12 2L3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/><polyline points="9 12 12 15 16 10"/>',
+   info:[['METHOD','Email'],['VERIFIED','2 min ago'],['LEVEL','Full'],['STATUS','VERIFIED']],
+   actions:[{l:'ادامه',e:'Continue',ic:'arrow',primary:true}]},
+  {id:'subscribed',type:'success',cat:'success',fa:'اشتراک فعال شد',en:'Subscription Active',
+   descFa:'اشتراک پریمیوم شما فعال شد.',
+   descEn:'Your premium subscription is now active.',
+   icon:'<path d="M20 12V8H6a2 2 0 0 1 0-4h12v4"/><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/>',
+   info:[['PLAN','Pro Monthly'],['NEXT BILL','30 days'],['PRICE','$29.99/mo'],['STATUS','ACTIVE']],
+   actions:[{l:'مشاهده',e:'View',ic:'arrow',primary:true},{l:'ارتقا',e:'Upgrade',ic:'star'}]},
+
+  /* INFO */
+  {id:'update',type:'update',cat:'info',fa:'نسخه جدید موجود است',en:'New Version Available',
+   descFa:'Aurora نسخه ۳.۰ با امکانات جدید آماده دانلود است.',
+   descEn:'Aurora v3.0 with new features is ready.',
+   icon:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>',
+   info:[['CURRENT','v2.8.1'],['NEW','v3.0.0'],['SIZE','24.8 MB'],['STATUS','AVAILABLE']],
+   progress:{percent:78,label:'Downloading...'},
+   changelog:[
+     {tag:'NEW',tagClass:'new',fa:'پشتیبانی از حالت تاریک پیشرفته',en:'Advanced dark mode'},
+     {tag:'IMP',tagClass:'imp',fa:'بهبود ۳ برابری سرعت بارگذاری',en:'3x faster loading'},
+     {tag:'FIX',tagClass:'fix',fa:'رفع مشکل ورود در Safari',en:'Fixed Safari login'},
+     {tag:'SEC',tagClass:'sec',fa:'رمزنگاری جدید end-to-end',en:'New E2E encryption'}
+   ],
+   actions:[{l:'بروزرسانی',e:'Update',ic:'download',primary:true},{l:'بعداً',e:'Later',ic:'clock'}]},
+  {id:'announcement',type:'info',cat:'info',fa:'اطلاعیه مهم',en:'Important Announcement',
+   descFa:'قابلیت جدید تیم‌های کاری به‌زودی فعال می‌شود.',
+   descEn:'New Teams feature launching soon.',
+   icon:'<path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>',
+   info:[['FEATURE','Teams'],['LAUNCH','Soon'],['BETA','Available'],['STATUS','ANNOUNCEMENT']],
+   actions:[{l:'ثبت‌نام بتا',e:'Join Beta',ic:'users',primary:true}]},
+  {id:'tips',type:'info',cat:'info',fa:'نکته امروز',en:'Tip of the Day',
+   descFa:'با کلید Shift + E سریعتر فایل‌ها را انتخاب کنید.',
+   descEn:'Use Shift + E to select files faster.',
+   icon:'<circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/>',
+   info:[['SHORTCUT','Shift + E'],['TIME SAVED','~2 min'],['CATEGORY','Productivity'],['STATUS','TIP']],
+   actions:[{l:'نکات بیشتر',e:'More Tips',ic:'lightbulb',primary:true}]},
+  {id:'featured',type:'info',cat:'info',fa:'قابلیت ویژه',en:'Featured Feature',
+   descFa:'آیا می‌دانستید می‌توانید پنل‌ها را سفارشی کنید؟',
+   descEn:'Did you know you can customize your dashboard?',
+   icon:'<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+   info:[['FEATURE','Custom Dash'],['USERS','12,847'],['RATING','4.9/5'],['STATUS','FEATURED']],
+   actions:[{l:'امتحان کنید',e:'Try It',ic:'play',primary:true}]},
+  {id:'news',type:'info',cat:'info',fa:'خبر جدید',en:'Latest News',
+   descFa:'Aurora در لیست ۱۰ اپلیکیشن برتر ماه قرار گرفت.',
+   descEn:'Aurora was featured in top 10 apps.',
+   icon:'<path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/>',
+   info:[['RANK','#7'],['CATEGORY','Productivity'],['VOTES','8,421'],['STATUS','NEWS']],
+   actions:[{l:'خواندن',e:'Read',ic:'book',primary:true}]},
+  {id:'feedback',type:'info',cat:'info',fa:'نظر شما مهم است',en:'Your Feedback Matters',
+   descFa:'چند ثانیه وقت بگذارید و تجربه خود را با ما به اشتراک بگذارید.',
+   descEn:'Take a few seconds to share your experience.',
+   icon:'<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+   info:[['QUESTIONS','5'],['TIME','~2 min'],['REWARD','50 points'],['STATUS','OPEN']],
+   actions:[{l:'شروع',e:'Start',ic:'edit',primary:true}]},
+
+  /* WARNING */
+  {id:'storage',type:'warning',cat:'warning',fa:'فضای ذخیره‌سازی رو به اتمام است',en:'Storage Almost Full',
+   descFa:'۹۰٪ از فضای ذخیره‌سازی شما پر شده است.',
+   descEn:'90% of your storage is full.',
+   icon:'<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
+   info:[['USED','45.2 GB'],['TOTAL','50 GB'],['FREE','4.8 GB'],['STATUS','90% FULL']],
+   progress:{percent:90,label:'Storage used'},
+   actions:[{l:'مدیریت',e:'Manage',ic:'hard-drive',primary:true},{l:'ارتقا',e:'Upgrade',ic:'arrow-up'}]},
+  {id:'expiring',type:'warning',cat:'warning',fa:'اشتراک شما در حال اتمام است',en:'Subscription Expiring',
+   descFa:'اشتراک پریمیوم شما تا ۳ روز دیگر منقضی می‌شود.',
+   descEn:'Your premium subscription expires in 3 days.',
+   icon:'<circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/>',
+   info:[['PLAN','Pro'],['EXPIRES','in 3 days'],['PRICE','$29.99/mo'],['STATUS','EXPIRING']],
+   actions:[{l:'تمدید',e:'Renew',ic:'refresh',primary:true}]},
+  {id:'outdated',type:'warning',cat:'warning',fa:'نسخه شما قدیمی است',en:'Outdated Version',
+   descFa:'برای امنیت بیشتر، بروزرسانی کنید.',
+   descEn:'Update for better security.',
+   icon:'<circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/>',
+   info:[['YOUR','v2.5.0'],['LATEST','v3.0.0'],['SECURITY','at risk'],['STATUS','OUTDATED']],
+   actions:[{l:'بروزرسانی',e:'Update',ic:'download',primary:true}]},
+  {id:'unverified',type:'warning',cat:'warning',fa:'حساب تأیید نشده',en:'Account Not Verified',
+   descFa:'برای دسترسی کامل، حساب خود را تأیید کنید.',
+   descEn:'Verify your account for full access.',
+   icon:'<path d="M12 2L3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/><line x1="12" y1="8" x2="12" y2="12"/>',
+   info:[['METHOD','Email'],['STATUS','PENDING'],['SENT','5 min ago'],['ACTION','Verify']],
+   actions:[{l:'تأیید',e:'Verify',ic:'mail',primary:true}]},
+  {id:'deprecated',type:'warning',cat:'warning',fa:'قابلیت در حال حذف',en:'Feature Deprecation',
+   descFa:'API v1 تا ۳۰ روز دیگر غیرفعال می‌شود.',
+   descEn:'API v1 will be deactivated in 30 days.',
+   icon:'<circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="13"/>',
+   info:[['FEATURE','API v1'],['SUNSET','30 days'],['NEW','API v2'],['STATUS','DEPRECATED']],
+   actions:[{l:'راهنما',e:'Guide',ic:'book',primary:true}]},
+
+  /* ERROR */
+  {id:'failed',type:'error',cat:'error',fa:'عملیات ناموفق',en:'Operation Failed',
+   descFa:'متأسفانه عملیات شما با خطا مواجه شد.',
+   descEn:'Unfortunately your request failed.',
+   icon:'<circle cx="12" cy="12" r="9"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/>',
+   info:[['ERROR','ERR_NETWORK'],['CODE','500'],['RETRY','3/3'],['STATUS','FAILED']],
+   actions:[{l:'تلاش مجدد',e:'Retry',ic:'refresh',primary:true}]},
+  {id:'security-alert',type:'security',cat:'error',fa:'هشدار امنیتی',en:'Security Alert',
+   descFa:'ورود ناموفق به حساب شما از موقعیت ناشناس.',
+   descEn:'Failed login from unknown location.',
+   icon:'<path d="M12 2L3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/><line x1="9" y1="9" x2="15" y2="15"/>',
+   info:[['LOCATION','Moscow, RU'],['IP','185.220.101.5'],['TIME','5 min ago'],['STATUS','BLOCKED']],
+   actions:[{l:'بررسی',e:'Review',ic:'shield',primary:true}]},
+  {id:'payment-failed',type:'error',cat:'error',fa:'پرداخت ناموفق',en:'Payment Failed',
+   descFa:'تراکنش شما رد شد.',
+   descEn:'Your transaction was declined.',
+   icon:'<rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/>',
+   info:[['AMOUNT','$49.99'],['CARD','****1234'],['CODE','INSUFFICIENT'],['STATUS','DECLINED']],
+   actions:[{l:'تلاش',e:'Retry',ic:'refresh',primary:true}]},
+  {id:'session-expired',type:'error',cat:'error',fa:'نشست منقضی شد',en:'Session Expired',
+   descFa:'نشست شما منقضی شده است.',
+   descEn:'Your session expired.',
+   icon:'<circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/>',
+   info:[['SESSION','abc-123'],['EXPIRED','2 min ago'],['REASON','Inactivity'],['STATUS','EXPIRED']],
+   actions:[{l:'ورود',e:'Sign In',ic:'log-in',primary:true}]},
+  {id:'rate-limit',type:'error',cat:'error',fa:'محدودیت درخواست',en:'Rate Limit Exceeded',
+   descFa:'تعداد درخواست‌های شما از حد مجاز فراتر رفته.',
+   descEn:'You exceeded the request rate.',
+   icon:'<circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/>',
+   info:[['LIMIT','100/min'],['USED','147'],['RESET','23s'],['STATUS','RATE_LIMITED']],
+   progress:{percent:100,label:'Over limit'},
+   actions:[{l:'صبر',e:'Wait',ic:'clock',primary:true}]},
+
+  /* UPDATE */
+  {id:'major-update',type:'update',cat:'update',fa:'بروزرسانی بزرگ',en:'Major Update',
+   descFa:'Aurora v4.0 با بازطراحی کامل و قابلیت‌های انقلابی در راه است.',
+   descEn:'Aurora v4.0 with complete redesign.',
+   icon:'<path d="M12 2v6l4-2M12 2v6L8 4"/><path d="M12 22v-8M8 18l4 4 4-4"/><circle cx="12" cy="12" r="3"/>',
+   info:[['VERSION','v4.0.0'],['SIZE','48.2 MB'],['RELEASE','Today'],['TYPE','MAJOR']],
+   progress:{percent:45,label:'Preparing...'},
+   changelog:[
+     {tag:'NEW',tagClass:'new',fa:'طراحی کاملاً جدید',en:'New design'},
+     {tag:'NEW',tagClass:'new',fa:'دستیار AI',en:'AI assistant'},
+     {tag:'IMP',tagClass:'imp',fa:'۵ برابر سریع‌تر',en:'5x faster'},
+     {tag:'SEC',tagClass:'sec',fa:'AES-256',en:'AES-256'},
+     {tag:'FIX',tagClass:'fix',fa:'رفع ۴۷ باگ',en:'Fixed 47 bugs'}
+   ],
+   actions:[{l:'دانلود',e:'Download',ic:'download',primary:true},{l:'یادداشت',e:'Notes',ic:'file'}]},
+  {id:'minor-update',type:'update',cat:'update',fa:'بروزرسانی جزئی',en:'Minor Update',
+   descFa:'نسخه v3.0.2 منتشر شد.',
+   descEn:'Version v3.0.2 released.',
+   icon:'<polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/>',
+   info:[['VERSION','v3.0.2'],['SIZE','8.4 MB'],['TYPE','MINOR'],['STATUS','READY']],
+   progress:{percent:100,label:'Ready'},
+   changelog:[
+     {tag:'FIX',tagClass:'fix',fa:'رفع مشکل موبایل',en:'Fixed mobile'},
+     {tag:'IMP',tagClass:'imp',fa:'بهبود اسکرول',en:'Better scroll'}
+   ],
+   actions:[{l:'نصب',e:'Install',ic:'download',primary:true}]},
+  {id:'security-update',type:'update',cat:'update',fa:'بروزرسانی امنیتی',en:'Security Update',
+   descFa:'بروزرسانی امنیتی مهم - فوراً نصب کنید.',
+   descEn:'Important security update - install now.',
+   icon:'<path d="M12 2L3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/><polyline points="9 12 12 15 16 10"/>',
+   info:[['SEVERITY','High'],['CVE','CVE-2024-1234'],['PATCH','v3.0.3'],['STATUS','CRITICAL']],
+   changelog:[
+     {tag:'SEC',tagClass:'sec',fa:'پچ آسیب‌پذیری XSS',en:'XSS patch'},
+     {tag:'SEC',tagClass:'sec',fa:'رفع CSRF',en:'CSRF fix'}
+   ],
+   actions:[{l:'فوری',e:'Install',ic:'shield',primary:true}]},
+  {id:'feature-preview',type:'update',cat:'update',fa:'پیش‌نمایش قابلیت',en:'Feature Preview',
+   descFa:'قابلیت Dark Mode Pro در دسترس کاربران بتا.',
+   descEn:'Dark Mode Pro for beta users.',
+   icon:'<circle cx="12" cy="12" r="9"/><path d="M12 3v18"/>',
+   info:[['FEATURE','Dark Pro'],['STATUS','Beta'],['ELIGIBLE','Yes'],['REQUIRE','v3.0+']],
+   actions:[{l:'فعال‌سازی',e:'Enable',ic:'play',primary:true}]},
+  {id:'rollback',type:'update',cat:'update',fa:'بازگشت نسخه',en:'Rollback Available',
+   descFa:'می‌توانید به نسخه قبلی بازگردید.',
+   descEn:'You can rollback to previous version.',
+   icon:'<polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>',
+   info:[['CURRENT','v3.0.0'],['PREVIOUS','v2.8.1'],['BACKUP','Available'],['STATUS','READY']],
+   actions:[{l:'بازگردانی',e:'Rollback',ic:'rotate',primary:true}]},
+  {id:'scheduled-update',type:'update',cat:'update',fa:'بروزرسانی زمان‌بندی شده',en:'Scheduled Update',
+   descFa:'امشب ساعت ۲ بامداد نصب خودکار.',
+   descEn:'Auto-install tonight at 2 AM.',
+   icon:'<circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/>',
+   info:[['SCHEDULED','Tonight 2 AM'],['DURATION','~5 min'],['VERSION','v3.0.2'],['STATUS','SCHEDULED']],
+   actions:[{l:'تغییر',e:'Reschedule',ic:'clock',primary:true}]},
+
+  /* MAINTENANCE */
+  {id:'maintenance-now',type:'maintenance',cat:'maintenance',fa:'در حال تعمیرات',en:'Under Maintenance',
+   descFa:'سیستم در حال حاضر در دسترس نیست.',
+   descEn:'System is currently unavailable.',
+   icon:'<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+   info:[['STARTED','2:00 AM'],['ETA','6:00 AM'],['REASON','DB Migration'],['STATUS','MAINTENANCE']],
+   progress:{percent:35,label:'In progress'},
+   actions:[{l:'اطلاع',e:'Notify',ic:'bell',primary:true}]},
+  {id:'maintenance-soon',type:'maintenance',cat:'maintenance',fa:'تعمیرات به‌زودی',en:'Maintenance Soon',
+   descFa:'۳۰ دقیقه دیگر تعمیرات شروع می‌شود.',
+   descEn:'Maintenance starts in 30 minutes.',
+   icon:'<circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/>',
+   info:[['STARTS','30 min'],['DURATION','2 hours'],['SERVICE','All'],['STATUS','SCHEDULED']],
+   actions:[{l:'یادآور',e:'Remind',ic:'bell',primary:true}]},
+  {id:'partial-maintenance',type:'maintenance',cat:'maintenance',fa:'تعمیرات جزئی',en:'Partial Maintenance',
+   descFa:'فقط بخش پرداخت در حال تعمیر است.',
+   descEn:'Only payments under maintenance.',
+   icon:'<path d="M12 2L3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/><line x1="9" y1="9" x2="15" y2="15"/>',
+   info:[['SERVICE','Payments'],['STATUS','Maintenance'],['OTHERS','Online'],['ETA','2 hours']],
+   actions:[{l:'اطلاعات',e:'Info',ic:'info',primary:true}]},
+  {id:'migration',type:'maintenance',cat:'maintenance',fa:'مهاجرت سرور',en:'Server Migration',
+   descFa:'انتقال به سرورهای پرسرعت جدید.',
+   descEn:'Migrating to faster servers.',
+   icon:'<polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>',
+   info:[['FROM','us-east-1'],['TO','eu-west-1'],['PROGRESS','78%'],['STATUS','MIGRATING']],
+   progress:{percent:78,label:'Migrating'},
+   actions:[{l:'مشاهده',e:'View',ic:'activity',primary:true}]},
+  {id:'restored',type:'maintenance',cat:'maintenance',fa:'سرویس بازگشت',en:'Service Restored',
+   descFa:'تعمیرات پایان یافت.',
+   descEn:'Maintenance complete.',
+   icon:'<circle cx="12" cy="12" r="9"/><polyline points="8 12 11 15 16 9"/>',
+   info:[['DURATION','2h 15min'],['ISSUES','0'],['SERVICES','Online'],['STATUS','RESTORED']],
+   actions:[{l:'ادامه',e:'Continue',ic:'arrow',primary:true}]},
+
+  /* SECURITY */
+  {id:'new-login',type:'security',cat:'security',fa:'ورود جدید به حساب',en:'New Login Detected',
+   descFa:'ورود از دستگاه ناشناس شناسایی شد.',
+   descEn:'Login from unknown device.',
+   icon:'<path d="M12 2L3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/><circle cx="12" cy="11" r="3"/>',
+   info:[['DEVICE','iPhone 15'],['LOCATION','Tehran'],['IP','5.144.130.20'],['TIME','Just now']],
+   actions:[{l:'این من بودم',e:'It was me',ic:'check',primary:true}]},
+  {id:'password-changed',type:'security',cat:'security',fa:'رمز عبور تغییر کرد',en:'Password Changed',
+   descFa:'رمز عبور حساب شما تغییر یافت.',
+   descEn:'Your password was changed.',
+   icon:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+   info:[['CHANGED','5 min ago'],['IP','5.144.130.20'],['DEVICE','Chrome'],['STATUS','SUCCESS']],
+   actions:[{l:'این من نبودم',e:'Not Me',ic:'alert',primary:true}]},
+  {id:'2fa-enabled',type:'security',cat:'security',fa:'2FA فعال شد',en:'2FA Enabled',
+   descFa:'تأیید دو مرحله‌ای فعال شد.',
+   descEn:'2FA is now enabled.',
+   icon:'<path d="M12 2L3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/><polyline points="9 12 12 15 16 10"/>',
+   info:[['METHOD','Auth app'],['BACKUP','Saved'],['LEVEL','Enhanced'],['STATUS','ACTIVE']],
+   actions:[{l:'کدهای پشتیبان',e:'Backup Codes',ic:'key',primary:true}]},
+  {id:'new-device',type:'security',cat:'security',fa:'دستگاه جدید',en:'New Device Added',
+   descFa:'دستگاه جدید به حساب اضافه شد.',
+   descEn:'A new device was added.',
+   icon:'<rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/>',
+   info:[['DEVICE','MacBook Pro'],['OS','macOS 14.2'],['LOCATION','Tehran'],['STATUS','ADDED']],
+   actions:[{l:'مدیریت',e:'Manage',ic:'smartphone',primary:true}]},
+  {id:'suspicious',type:'security',cat:'security',fa:'فعالیت مشکوک',en:'Suspicious Activity',
+   descFa:'فعالیت مشکوک شناسایی شد.',
+   descEn:'Suspicious activity detected.',
+   icon:'<path d="M12 2L3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/><line x1="12" y1="8" x2="12" y2="12"/>',
+   info:[['EVENT','Multiple logins'],['COUNT','7'],['SOURCE','Unknown'],['STATUS','FLAGGED']],
+   actions:[{l:'بررسی',e:'Review',ic:'eye',primary:true}]},
+
+  /* BILLING */
+  {id:'invoice',type:'billing',cat:'billing',fa:'صورتحساب جدید',en:'New Invoice',
+   descFa:'صورتحساب ماهانه شما صادر شد.',
+   descEn:'Your monthly invoice has been generated.',
+   icon:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>',
+   info:[['INVOICE','INV-2024-0824'],['AMOUNT','$29.99'],['DUE','in 7 days'],['STATUS','UNPAID']],
+   actions:[{l:'پرداخت',e:'Pay',ic:'credit-card',primary:true}]},
+  {id:'upgrade-offer',type:'billing',cat:'billing',fa:'پیشنهاد ارتقا',en:'Upgrade Offer',
+   descFa:'۲۰٪ تخفیف ارتقا به Pro.',
+   descEn:'20% off upgrade to Pro.',
+   icon:'<path d="M20 12V8H6a2 2 0 0 1 0-4h12v4"/><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/>',
+   info:[['CURRENT','Free'],['TARGET','Pro'],['DISCOUNT','20%'],['EXPIRES','48 hours']],
+   bill:{plan:'Pro Plan',price:'$23.99',per:'/month',features:[
+     {fa:'ذخیره‌سازی نامحدود',en:'Unlimited storage'},
+     {fa:'پشتیبانی ۲۴/۷',en:'24/7 support'},
+     {fa:'API اختصاصی',en:'Dedicated API'}
+   ]},
+   actions:[{l:'ارتقا',e:'Upgrade',ic:'arrow-up',primary:true}]},
+  {id:'renewal',type:'billing',cat:'billing',fa:'یادآوری تمدید',en:'Renewal Reminder',
+   descFa:'اشتراک ۳ روز دیگر تمدید می‌شود.',
+   descEn:'Subscription renews in 3 days.',
+   icon:'<polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/>',
+   info:[['PLAN','Pro'],['PRICE','$29.99'],['RENEWS','in 3 days'],['METHOD','Visa ****1234']],
+   actions:[{l:'مدیریت',e:'Manage',ic:'gear',primary:true}]},
+  {id:'refund',type:'billing',cat:'billing',fa:'بازگشت وجه',en:'Refund Issued',
+   descFa:'بازگشت وجه تأیید و پردازش شد.',
+   descEn:'Refund approved and processed.',
+   icon:'<circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8" stroke-width="2"/>',
+   info:[['AMOUNT','$49.99'],['METHOD','Original card'],['ETA','3-5 days'],['STATUS','PROCESSING']],
+   actions:[{l:'مشاهده',e:'View',ic:'eye',primary:true}]},
+  {id:'card-expiring',type:'billing',cat:'billing',fa:'کارت در حال انقضا',en:'Card Expiring',
+   descFa:'کارت بانکی شما تا پایان ماه منقضی می‌شود.',
+   descEn:'Your card expires at end of month.',
+   icon:'<rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/>',
+   info:[['CARD','Visa ****1234'],['EXPIRES','04/24'],['DAYS','12 days'],['STATUS','EXPIRING']],
+   actions:[{l:'بروزرسانی',e:'Update',ic:'credit-card',primary:true}]},
+
+  /* SOCIAL */
+  {id:'new-follower',type:'social',cat:'social',fa:'دنبال‌کننده جدید',en:'New Follower',
+   descFa:'۳ نفر جدید شما را دنبال کردند.',
+   descEn:'3 new followers.',
+   icon:'<path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/>',
+   info:[['NEW','3'],['TOTAL','1,247'],['CHANGE','+0.2%'],['STATUS','NEW']],
+   actions:[{l:'مشاهده',e:'View',ic:'users',primary:true}]},
+  {id:'mention',type:'social',cat:'social',fa:'منشن شدید',en:'You Were Mentioned',
+   descFa:'کسی شما را در یک پست منشن کرد.',
+   descEn:'Someone mentioned you.',
+   icon:'<circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/>',
+   info:[['FROM','@ali_ahmadi'],['POST','Project'],['TIME','2 min ago'],['STATUS','MENTION']],
+   actions:[{l:'مشاهده',e:'View',ic:'external-link',primary:true}]},
+  {id:'comment',type:'social',cat:'social',fa:'نظر جدید',en:'New Comment',
+   descFa:'کسی روی پست شما نظر داد.',
+   descEn:'Someone commented on your post.',
+   icon:'<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+   info:[['FROM','Sara M'],['POST','Design'],['COMMENTS','5'],['STATUS','NEW']],
+   actions:[{l:'مشاهده',e:'View',ic:'eye',primary:true}]},
+  {id:'like-milestone',type:'social',cat:'social',fa:'۱۰۰۰ لایک!',en:'1000 Likes!',
+   descFa:'پست شما به ۱۰۰۰ لایک رسید.',
+   descEn:'Your post reached 1000 likes!',
+   icon:'<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
+   info:[['LIKES','1,000'],['POST','Top Design'],['ENGAGEMENT','12.5%'],['STATUS','MILESTONE']],
+   actions:[{l:'اشتراک',e:'Share',ic:'share',primary:true}]},
+  {id:'birthday',type:'social',cat:'social',fa:'تولدت مبارک!',en:'Happy Birthday!',
+   descFa:'تیم Aurora تولد شما را تبریک می‌گوید! 🎉',
+   descEn:'The Aurora team wishes you a happy birthday! 🎉',
+   icon:'<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+   info:[['DATE','Today'],['GIFT','50 points'],['DISCOUNT','20%'],['STATUS','CELEBRATE']],
+   actions:[{l:'دریافت هدیه',e:'Get Gift',ic:'gift',primary:true}]},
+
+  /* PROMO */
+  {id:'flash-sale',type:'promo',cat:'promo',fa:'حراج فوری!',en:'Flash Sale!',
+   descFa:'۵۰٪ تخفیف روی همه پلن‌ها. فقط امروز!',
+   descEn:'50% off on all plans. Today only!',
+   icon:'<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+   info:[['DISCOUNT','50%'],['EXPIRES','23:59'],['CODE','FLASH50'],['STATUS','ACTIVE']],
+   actions:[{l:'خرید',e:'Buy',ic:'shopping-cart',primary:true}]},
+  {id:'new-feature-promo',type:'promo',cat:'promo',fa:'قابلیت جدید رایگان',en:'New Feature Free',
+   descFa:'قابلیت Teams رایگان شد!',
+   descEn:'Teams is now free!',
+   icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',
+   info:[['FEATURE','Teams'],['PRICE','Free'],['LIMIT','10 users'],['STATUS','FREE']],
+   actions:[{l:'فعال‌سازی',e:'Enable',ic:'play',primary:true}]},
+  {id:'referral',type:'promo',cat:'promo',fa:'دعوت دوستان',en:'Invite Friends',
+   descFa:'هر دوست $10 اعتبار.',
+   descEn:'$10 credit per friend.',
+   icon:'<path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/>',
+   info:[['REWARD','$10'],['INVITED','0'],['EARNED','$0'],['STATUS','ACTIVE']],
+   actions:[{l:'دعوت',e:'Invite',ic:'user-plus',primary:true}]},
+  {id:'loyalty',type:'promo',cat:'promo',fa:'هدیه وفاداری',en:'Loyalty Gift',
+   descFa:'۱ سال با ما هستید! یک ماه رایگان.',
+   descEn:'1 year with us! Free month.',
+   icon:'<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+   info:[['MILESTONE','1 year'],['GIFT','1 month'],['EXPIRES','30 days'],['STATUS','ACTIVE']],
+   actions:[{l:'دریافت',e:'Claim',ic:'gift',primary:true}]},
+  {id:'contest',type:'promo',cat:'promo',fa:'مسابقه هفتگی',en:'Weekly Contest',
+   descFa:'شرکت کنید و iPad ببرید!',
+   descEn:'Join and win an iPad!',
+   icon:'<circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>',
+   info:[['PRIZE','iPad Pro'],['JOINED','1,247'],['ENDS','Sunday'],['STATUS','LIVE']],
+   actions:[{l:'شرکت',e:'Join',ic:'play',primary:true}]},
+
+  /* SYSTEM */
+  {id:'cookie',type:'system',cat:'system',fa:'کوکی‌ها',en:'Cookie Notice',
+   descFa:'ما از کوکی‌ها برای بهبود تجربه استفاده می‌کنیم.',
+   descEn:'We use cookies to improve experience.',
+   icon:'<circle cx="12" cy="12" r="9"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/><circle cx="9" cy="15" r="1.5" fill="currentColor"/><circle cx="15" cy="15" r="1.5" fill="currentColor"/>',
+   info:[['ESSENTIAL','Required'],['ANALYTICS','Optional'],['MARKETING','Optional'],['STATUS','PENDING']],
+   actions:[{l:'پذیرش',e:'Accept',ic:'check',primary:true},{l:'سفارشی',e:'Customize',ic:'settings'}]},
+  {id:'terms-update',type:'system',cat:'system',fa:'بروزرسانی قوانین',en:'Terms Updated',
+   descFa:'قوانین و شرایط به‌روزرسانی شد.',
+   descEn:'Terms of service have been updated.',
+   icon:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>',
+   info:[['UPDATED','2 days ago'],['EFFECTIVE','30 days'],['CHANGES','3 sections'],['STATUS','PENDING']],
+   actions:[{l:'مشاهده',e:'View',ic:'file',primary:true}]},
+  {id:'offline',type:'system',cat:'system',fa:'اتصال قطع شد',en:'You Are Offline',
+   descFa:'اتصال اینترنت قطع شده.',
+   descEn:'You are currently offline.',
+   icon:'<path d="M5 12.55a11 11 0 0 1 14 0M8.53 16.11a6 6 0 0 1 6.94 0M12 20h.01"/><line x1="3" y1="3" x2="21" y2="21" stroke-width="2"/>',
+   info:[['STATUS','Offline'],['LAST SYNC','2 min ago'],['PENDING','3 items'],['MODE','Offline']],
+   actions:[{l:'تلاش',e:'Retry',ic:'refresh',primary:true}]},
+  {id:'sync',type:'system',cat:'system',fa:'همگام‌سازی',en:'Syncing Data',
+   descFa:'در حال همگام‌سازی...',
+   descEn:'Syncing your data...',
+   icon:'<polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/>',
+   info:[['FILES','247'],['SYNCED','156'],['REMAINING','91'],['STATUS','SYNCING']],
+   progress:{percent:63,label:'Syncing'},
+   actions:[{l:'مشاهده',e:'View',ic:'activity',primary:true}]},
+  {id:'backup',type:'system',cat:'system',fa:'نسخه پشتیبان',en:'Backup Complete',
+   descFa:'نسخه پشتیبان کامل گرفته شد.',
+   descEn:'Complete backup created.',
+   icon:'<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>',
+   info:[['SIZE','1.2 GB'],['DURATION','45s'],['LOCATION','Cloud'],['STATUS','COMPLETE']],
+   actions:[{l:'مدیریت',e:'Manage',ic:'hard-drive',primary:true}]}
+];
+
+const NOTECATS = [
+  {id:'all', fa:'همه', en:'All'},
+  {id:'success', fa:'موفقیت', en:'Success'},
+  {id:'info', fa:'اطلاعات', en:'Info'},
+  {id:'warning', fa:'هشدار', en:'Warning'},
+  {id:'error', fa:'خطا', en:'Error'},
+  {id:'update', fa:'بروزرسانی', en:'Update'},
+  {id:'maintenance', fa:'تعمیرات', en:'Maintenance'},
+  {id:'security', fa:'امنیت', en:'Security'},
+  {id:'billing', fa:'پرداخت', en:'Billing'},
+  {id:'social', fa:'اجتماعی', en:'Social'},
+  {id:'promo', fa:'تبلیغات', en:'Promo'},
+  {id:'system', fa:'سیستم', en:'System'}
+];
+
+const ICONS = {
+  arrow:'<polyline points="5 12 19 12"/><polyline points="12 5 19 12 12 19"/>',
+  gear:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
+  file:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>',
+  download:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>',
+  eye:'<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>',
+  star:'<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+  clock:'<circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/>',
+  users:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',
+  info:'<circle cx="12" cy="12" r="9"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>',
+  lightbulb:'<path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/>',
+  play:'<polygon points="5 3 19 12 5 21 5 3"/>',
+  book:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',
+  bell:'<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>',
+  edit:'<path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>',
+  'hard-drive':'<line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>',
+  'arrow-up':'<polyline points="5 12 12 5 19 12"/><line x1="12" y1="19" x2="12" y2="5"/>',
+  refresh:'<polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>',
+  mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7.5l9 6 9-6"/>',
+  shield:'<path d="M12 2L3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/>',
+  key:'<path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>',
+  'credit-card':'<rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/>',
+  'log-in':'<path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/>',
+  alert:'<path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13"/>',
+  check:'<polyline points="20 6 9 17 4 12"/>',
+  activity:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
+  rotate:'<polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>',
+  smartphone:'<rect x="5" y="2" width="14" height="20" rx="2"/>',
+  lock:'<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+  gift:'<polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/>',
+  'shopping-cart':'<circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>',
+  'user-plus':'<path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/>',
+  'external-link':'<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>',
+  share:'<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>',
+  settings:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33"/>'
+};
+
+/* UTILS */
+function togglePnl(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const wasOpen=el.classList.contains('on');
+  document.querySelectorAll('.pnl').forEach(p=>p.classList.remove('on'));
+  if(!wasOpen)el.classList.add('on');
+}
+document.addEventListener('click',e=>{
+  const pnl=e.target.closest('.pnl');
+  const btn=e.target.closest('.tbtn');
+  if(!pnl&&!btn)document.querySelectorAll('.pnl').forEach(p=>p.classList.remove('on'));
+});
+
+function toggleLang(){S.lang=S.lang==='fa'?'en':'fa';applyLang()}
+function applyLang(){
+  const h=document.documentElement,l=document.getElementById('langL');
+  if(S.lang==='fa'){h.setAttribute('lang','fa');h.setAttribute('dir','rtl');l.textContent='EN'}
+  else{h.setAttribute('lang','en');h.setAttribute('dir','ltr');l.textContent='FA'}
+  document.querySelectorAll('[data-fa]').forEach(e=>{
+    const t=S.lang==='fa'?e.dataset.fa:e.dataset.en;
+    if(t)e.textContent=t;
+  });
+  localStorage.setItem('wv_lang',S.lang);
+  renderNote();
+}
+
+function setColor(n){
+  S.color=n;
+  document.body.setAttribute('data-color',n);
+  document.querySelectorAll('.sw').forEach(s=>s.classList.toggle('on',s.dataset.color===n));
+  localStorage.setItem('wv_color',n);
+}
+document.querySelectorAll('.sw').forEach(s=>s.addEventListener('click',()=>setColor(s.dataset.color)));
+
+const animGrid=document.getElementById('animGrid');
+ANIMS.forEach(a=>{
+  const b=document.createElement('button');
+  b.className='ani'+(a.id===S.anim?' on':'');
+  b.dataset.id=a.id;
+  b.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${a.svg}</svg><span data-fa="${a.fa}" data-en="${a.en}">${a.fa}</span>`;
+  b.addEventListener('click',()=>setAnim(a.id));
+  animGrid.appendChild(b);
+});
+function setAnim(n){
+  S.anim=n;
+  document.body.setAttribute('data-note-anim',n);
+  document.querySelectorAll('.ani').forEach(e=>e.classList.toggle('on',e.dataset.id===n));
+  localStorage.setItem('wv_anim',n);
+}
+
+const trailGrid=document.getElementById('trailGrid');
+TRAILS.forEach(t=>{
+  const b=document.createElement('button');
+  b.className='trail';
+  b.dataset.id=t.id;
+  b.innerHTML=`<div class="ti">${t.emoji}</div><span data-fa="${t.fa}" data-en="${t.en}">${t.fa}</span>`;
+  b.addEventListener('click',e=>{e.stopPropagation();setTrail(t.id)});
+  trailGrid.appendChild(b);
+});
+function setTrail(id){
+  S.trail=id;
+  document.querySelectorAll('.trail').forEach(e=>e.classList.toggle('on',e.dataset.id===id));
+  const tr=TRAILS.find(t=>t.id===id);
+  if(!tr)return;
+  const cursor=document.getElementById('customCursor');
+  if(!cursor)return;
+  cursor.style.color=tr.color;
+  cursor.innerHTML=`<svg viewBox="0 0 24 24"><path d="M5 3l14 7-6 1.5L11 18z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="rgba(255,255,255,.15)"/></svg>`;
+  window.__currentTrail=tr;
+  localStorage.setItem('wv_trail',id);
+}
+
+const noteCatsEl=document.getElementById('noteCats');
+function renderNoteCats(){
+  noteCatsEl.innerHTML='';
+  NOTECATS.forEach(c=>{
+    const b=document.createElement('button');
+    b.className='cat'+(c.id===S.cat?' on':'');
+    b.dataset.cat=c.id;
+    b.textContent=S.lang==='fa'?c.fa:c.en;
+    b.setAttribute('data-fa',c.fa);b.setAttribute('data-en',c.en);
+    b.addEventListener('click',()=>setNoteCat(c.id));
+    noteCatsEl.appendChild(b);
+  });
+}
+function setNoteCat(c){
+  S.cat=c;
+  document.querySelectorAll('#noteCats .cat').forEach(b=>b.classList.toggle('on',b.dataset.cat===c));
+  renderNoteGrid();
+}
+
+const noteGrid=document.getElementById('noteGrid');
+function renderNoteGrid(){
+  noteGrid.innerHTML='';
+  const filtered=S.cat==='all'?NOTES:NOTES.filter(n=>n.cat===S.cat);
+  document.getElementById('noteCount').textContent=filtered.length;
+  filtered.forEach(note=>{
+    const b=document.createElement('button');
+    b.className='npi'+(note.id===S.note?' on':'');
+    b.dataset.id=note.id;
+    b.innerHTML=`<div class="npi-icon" data-t="${note.type}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${note.icon}</svg></div><span data-fa="${note.fa}" data-en="${note.en}">${note.fa}</span>`;
+    b.addEventListener('click',e=>{e.stopPropagation();setNote(note.id)});
+    noteGrid.appendChild(b);
+  });
+}
+
+function setNote(id){
+  S.note=id;
+  const note=NOTES.find(n=>n.id===id);
+  if(!note)return;
+  document.body.setAttribute('data-note-type',note.type);
+  document.querySelectorAll('.npi').forEach(e=>e.classList.toggle('on',e.dataset.id===id));
+  renderNote();
+  localStorage.setItem('wv_note',id);
+}
+
+/* RENDER NOTE — v2 layout */
+function renderNote(){
+  const note=NOTES.find(n=>n.id===S.note)||NOTES[0];
+  const layout=document.getElementById('noteLayout');
+  if(!layout)return;
+
+  const isFa=S.lang==='fa';
+  const title=isFa?note.fa:note.en;
+  const desc=isFa?note.descFa:note.descEn;
+
+  const typeLabels = {
+    success: isFa?'موفقیت':'SUCCESS',
+    info: isFa?'اطلاعیه':'NOTICE',
+    warning: isFa?'هشدار':'WARNING',
+    error: isFa?'خطا':'ERROR',
+    update: isFa?'بروزرسانی':'UPDATE',
+    maintenance: isFa?'تعمیرات':'MAINTENANCE',
+    security: isFa?'امنیت':'SECURITY',
+    billing: isFa?'پرداخت':'BILLING',
+    social: isFa?'اجتماعی':'SOCIAL',
+    promo: isFa?'ویژه':'PROMO',
+    system: isFa?'سیستم':'SYSTEM'
+  };
+
+  const ts=new Date().toISOString().replace('T',' ').substring(0,19);
+  const noteId='NTF-'+Math.random().toString(36).substr(2,9).toUpperCase();
+
+  // Info as grid cards
+  let infoHtml='';
+  if(note.info && note.info.length){
+    infoHtml='<div class="note-grid-info">';
+    note.info.forEach(item=>{
+      const [k,v]=item;
+      infoHtml+=`<div class="info-card"><div class="info-card-k">${k}</div><div class="info-card-v">${v}</div></div>`;
+    });
+    infoHtml+='</div>';
+  }
+
+  // Progress
+  let progressHtml='';
+  if(note.progress){
+    const pct=Math.min(100,note.progress.percent);
+    progressHtml=`
+      <div class="wave-progress">
+        <div class="wave-progress-label">
+          <span>${note.progress.label}</span>
+          <span class="pct">${pct}%</span>
+        </div>
+        <div class="wave-progress-track">
+          <div class="wave-progress-fill" style="width:${pct}%"></div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Timeline changelog
+  let timelineHtml='';
+  if(note.changelog && note.changelog.length){
+    timelineHtml='<div class="timeline">';
+    note.changelog.forEach(c=>{
+      const text=isFa?c.fa:c.en;
+      timelineHtml+=`<div class="tl-item"><span class="tl-tag ${c.tagClass}">${c.tag}</span><span>${text}</span></div>`;
+    });
+    timelineHtml+='</div>';
+  }
+
+  // Billing horizontal
+  let billHtml='';
+  if(note.bill){
+    billHtml=`<div class="bill-horizontal">
+      <div class="bill-plan-box">
+        <div class="bill-plan-name">${note.bill.plan}</div>
+        <div class="bill-price-h">${note.bill.price}<span class="per">${note.bill.per}</span></div>
+      </div>
+      <div class="bill-features-h">`;
+    note.bill.features.forEach(f=>{
+      const text=isFa?f.fa:f.en;
+      billHtml+=`<div class="bill-feat-h"><svg viewBox="0 0 24 24">${ICONS.check}</svg><span>${text}</span></div>`;
+    });
+    billHtml+='</div></div>';
+  }
+
+  // Actions
+  let actionsHtml='';
+  if(note.actions && note.actions.length){
+    actionsHtml='<div class="note-actions-h">';
+    note.actions.forEach(a=>{
+      const label=isFa?a.l:a.e;
+      const iconSvg=ICONS[a.ic]||ICONS.arrow;
+      const cls=a.primary?'note-btn primary':'note-btn';
+      actionsHtml+=`<button class="${cls}" onclick="doAction('${label}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">${iconSvg}</svg><span>${label}</span></button>`;
+    });
+    actionsHtml+='</div>';
+  }
+
+  layout.innerHTML=`
+    <div class="note-visual">
+      <div class="note-symbol-wrap">
+        <div class="orbit"><div class="orbit-dot"></div></div>
+        <div class="orbit o2"><div class="orbit-dot"></div></div>
+        <div class="orbit o3"><div class="orbit-dot"></div></div>
+        <div class="note-symbol">
+          <svg viewBox="0 0 24 24">${note.icon}</svg>
+        </div>
+      </div>
+    </div>
+    <div class="note-content">
+      <div class="note-tag">${typeLabels[note.type]||'NOTICE'}</div>
+      <h1 class="note-title">${title}</h1>
+      <p class="note-desc">${desc}</p>
+      ${progressHtml}
+      ${infoHtml}
+      ${timelineHtml}
+      ${billHtml}
+      ${actionsHtml}
+      <div class="note-meta-h">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>${ts}</span>
+        <span class="note-id-h">${noteId}</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7.5l9 6 9-6"/></svg>notifications@aurora.io</span>
+      </div>
+    </div>
+  `;
+}
+
+function doAction(label){toast(S.lang==='fa'?`اقدام: ${label}`:`Action: ${label}`,'info')}
+function nextNote(){
+  const idx=NOTES.findIndex(n=>n.id===S.note);
+  const next=(idx+1)%NOTES.length;
+  setNote(NOTES[next].id);
+}
+function prevNote(){
+  const idx=NOTES.findIndex(n=>n.id===S.note);
+  const prev=(idx-1+NOTES.length)%NOTES.length;
+  setNote(NOTES[prev].id);
+}
+
+let tmr;
+function toast(m,t='success'){
+  const el=document.getElementById('toast'),mm=document.getElementById('toastMsg');
+  mm.textContent=m;
+  el.className='toast on '+t;
+  clearTimeout(tmr);
+  tmr=setTimeout(()=>el.classList.remove('on'),3200);
+}
+
+/* CURSOR */
+(function(){
+  const cursor=document.getElementById('customCursor');
+  const canvas=document.getElementById('trailCanvas');
+  if(!cursor||!canvas)return;
+  const isTouch=('ontouchstart' in window)||navigator.maxTouchPoints>0;
+  if(isTouch){cursor.style.display='none';canvas.style.display='none';document.body.classList.add('no-custom-cursor');return;}
+  const ctx=canvas.getContext('2d');
+  let dpr=Math.min(devicePixelRatio||1,2),W=innerWidth,H=innerHeight;
+  function resize(){dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;canvas.width=W*dpr;canvas.height=H*dpr;canvas.style.width=W+'px';canvas.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0)}
+  resize();addEventListener('resize',resize);
+  let mx=W/2,my=H/2,cx=mx,cy=my,pMx=mx,pMy=my,moved=false;
+  const particles=[],MAX=120;
+  document.addEventListener('mousemove',e=>{
+    pMx=mx;pMy=my;mx=e.clientX;my=e.clientY;
+    if(!moved){moved=true;cx=mx;cy=my;cursor.classList.add('ready')}
+    const tr=window.__currentTrail;if(!tr||!tr.draw)return;
+    const dx=mx-pMx,dy=my-pMy,sp=Math.sqrt(dx*dx+dy*dy);
+    const angle=Math.atan2(dy,dx)+Math.PI/2;
+    let count=sp>25?3:sp>12?2:sp>3?1:0;
+    for(let i=0;i<count;i++){
+      if(particles.length>=MAX)particles.shift();
+      particles.push({x:mx+(Math.random()-.5)*10,y:my+(Math.random()-.5)*10,vx:(Math.random()-.5)*1.2+dx*.05,vy:(Math.random()-.5)*1.2+dy*.05,life:1,decay:.02+Math.random()*.02,angle,rotation:(Math.random()-.5)*.12,draw:tr.draw});
+    }
+  },{passive:true});
+  document.addEventListener('mouseover',e=>{if(e.target&&e.target.closest&&e.target.closest('button,a,input,.npi,.ani,.trail,.cat,.sw,.tbtn,.note-btn,.nav-btn,.info-card'))cursor.classList.add('hover')});
+  document.addEventListener('mouseout',e=>{if(e.target&&e.target.closest&&e.target.closest('button,a,input,.npi,.ani,.trail,.cat,.sw,.tbtn,.note-btn,.nav-btn,.info-card'))cursor.classList.remove('hover')});
+  document.addEventListener('mousedown',()=>cursor.classList.add('click'));
+  document.addEventListener('mouseup',()=>cursor.classList.remove('click'));
+  const lerp=(a,b,t)=>a+(b-a)*t;
+  function loop(){
+    cx=lerp(cx,mx,.35);cy=lerp(cy,my,.35);
+    let sc=1;if(cursor.classList.contains('hover'))sc=.85;if(cursor.classList.contains('click'))sc=.7;
+    cursor.style.transform=`translate3d(${cx-18}px,${cy-18}px,0) scale(${sc})`;
+    ctx.clearRect(0,0,W,H);
+    for(let i=particles.length-1;i>=0;i--){
+      const p=particles[i];
+      p.x+=p.vx;p.y+=p.vy;p.vx*=.95;p.vy*=.95;p.life-=p.decay;p.angle+=p.rotation;
+      if(p.life<=0){particles.splice(i,1);continue}
+      try{p.draw(ctx,p.x,p.y,p.angle,p.life)}catch(e){}
+    }
+    requestAnimationFrame(loop);
+  }
+  loop();
+  window.__currentTrail=TRAILS[0];
+})();
+
+/* STARS */
+(function(){
+  const c=document.getElementById('stars');if(!c)return;
+  const ctx=c.getContext('2d');
+  let W,H,dpr;const stars=[];const N=innerWidth<768?60:140;
+  function rs(){dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;c.style.width=W+'px';c.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0)}
+  function ini(){stars.length=0;for(let i=0;i<N;i++)stars.push({x:Math.random()*W,y:Math.random()*H*.6,z:Math.random()*.9+.1,r:Math.random()*1.2+.15,a:Math.random()*.6+.3,tw:Math.random()*Math.PI*2,ts:Math.random()*.03+.005})}
+  function loop(){
+    ctx.clearRect(0,0,W,H);
+    for(const s of stars){
+      s.tw+=s.ts;const a=s.a*(.4+.6*Math.abs(Math.sin(s.tw)));const r=s.r*(.6+s.z*.8);
+      ctx.beginPath();ctx.arc(s.x,s.y,r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(255,255,255,${a})`;ctx.shadowBlur=4*s.z;ctx.shadowColor='rgba(255,255,255,.7)';ctx.fill();
+    }
+    ctx.shadowBlur=0;
+    requestAnimationFrame(loop);
+  }
+  addEventListener('resize',()=>{rs();ini()});rs();ini();loop();
+})();
+
+/* DUST */
+(function(){
+  const c=document.getElementById('dust');if(!c)return;
+  const ctx=c.getContext('2d');
+  let W,H,dpr;const P=[];const N=innerWidth<768?20:40;
+  function rs(){dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;c.style.width=W+'px';c.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0)}
+  function ini(){P.length=0;for(let i=0;i<N;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3-.1,r:Math.random()*1.6+.4,a:Math.random()*.4+.15,p:Math.random()*Math.PI*2})}
+  function loop(){
+    ctx.clearRect(0,0,W,H);
+    const rt=getComputedStyle(document.documentElement);
+    const c1=rt.getPropertyValue('--g1').trim()||'124,58,237';
+    const c2=rt.getPropertyValue('--g2').trim()||'236,72,153';
+    for(const p of P){
+      p.x+=p.vx;p.y+=p.vy;p.p+=.02;
+      if(p.x<-10)p.x=W+10;if(p.x>W+10)p.x=-10;
+      if(p.y<-10)p.y=H+10;if(p.y>H+10)p.y=-10;
+      const a=p.a*(.5+.5*Math.sin(p.p));
+      const cc=Math.random()>.5?c1:c2;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(${cc},${a})`;ctx.shadowBlur=8;ctx.shadowColor=`rgba(${cc},${a})`;ctx.fill();
+    }
+    ctx.shadowBlur=0;
+    requestAnimationFrame(loop);
+  }
+  addEventListener('resize',()=>{rs();ini()});rs();ini();loop();
+})();
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')document.querySelectorAll('.pnl').forEach(p=>p.classList.remove('on'));
+  if(e.key==='ArrowRight')nextNote();
+  if(e.key==='ArrowLeft')prevNote();
+});
+
+(function(){
+  const sc=localStorage.getItem('wv_color');
+  const an=localStorage.getItem('wv_anim');
+  const lg=localStorage.getItem('wv_lang');
+  const tl=localStorage.getItem('wv_trail');
+  const id=localStorage.getItem('wv_note');
+
+  if(sc)setColor(sc);
+  if(an)S.anim=an;
+  if(lg)S.lang=lg;
+  if(tl)S.trail=tl;
+  if(id)S.note=id;
+
+  applyLang();
+  setAnim(S.anim);
+  renderNoteCats();
+  renderNoteGrid();
+  setTrail(S.trail);
+  setNote(S.note);
+})();
+</script>
+</body>
+</html>
